@@ -295,7 +295,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 .hero__clients {
   margin-top: 20px;
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 300;
   color: var(--color-text-muted);
 }
 
