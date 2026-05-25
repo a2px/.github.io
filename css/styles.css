@@ -95,13 +95,22 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 }
 
 .nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 20px;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  color: var(--color-text);
-  transition: color var(--ease);
+  font-weight: 400;
+  letter-spacing: 0;
+  color: #000000;
+  transition: opacity var(--ease);
 }
-.nav__logo:hover { color: var(--color-accent); }
+.nav__logo:hover { opacity: 0.75; }
+.nav__logo-star {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
 
 .nav__links {
   display: flex;
@@ -237,6 +246,13 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   line-height: 1.2;
   letter-spacing: 0;
   max-width: 100%;
+}
+
+.hero__clients {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-text-muted);
 }
 
 /* highlighted keywords */
@@ -396,9 +412,11 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   color: var(--color-text);
   margin-bottom: 8px;
 }
-.footer__star {
-  color: var(--color-accent);
-  font-size: 16px;
+.footer__star-img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 .footer__tagline {
   font-size: 16px;
