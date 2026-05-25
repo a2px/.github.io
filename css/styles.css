@@ -86,8 +86,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 }
 
 .nav__inner {
-  max-width: var(--container-max);
-  margin: 0 auto;
+  width: 100%;
   padding: 0 var(--container-px);
   height: 100%;
   display: flex;
@@ -228,11 +227,11 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
    ============================================================ */
 .hero {
   padding-top: calc(var(--nav-h) + var(--space-2xl));
-  padding-bottom: var(--space-2xl);
+  padding-bottom: var(--space-lg);
 }
 
 .hero__statement {
-  font-size: 40px;
+  font-size: 24px;
   font-weight: 300;
   color: var(--color-text-muted);
   line-height: 1.26;
@@ -256,7 +255,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
    PROJECTS SECTION
    ============================================================ */
 .projects {
-  padding: var(--space-xl) 0 var(--space-2xl);
+  padding: var(--space-lg) 0 var(--space-2xl);
 }
 
 .projects__header {
@@ -333,7 +332,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-bottom: 14px;
+  margin-top: 20px;
 }
 
 .card__title {
@@ -633,11 +632,9 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
     --space-2xl: 80px;
   }
 
-  .hero__name { letter-spacing: -0.025em; }
+  .hero__statement { font-size: 26px; }
 
   .card__body { padding: 20px 20px 24px; }
-
-  .hero__cta { flex-direction: column; align-items: flex-start; }
 }
 
 /* ============================================================
