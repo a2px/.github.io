@@ -235,8 +235,16 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
    HERO
    ============================================================ */
 .hero {
-  padding-top: calc(var(--nav-h) + var(--space-2xl));
+  padding-top: calc(var(--nav-h) + var(--space-lg));
   padding-bottom: var(--space-lg);
+}
+
+.hero__star {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 24px;
 }
 
 .hero__statement {
@@ -264,7 +272,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   font-style: normal;
 }
 .hl-blue  { color: #274CAB; }
-.hl-green { color: #AAC864; }
+.hl-green { color: #76980F; }
 .hl-red   { color: #BF3E3E; }
 .hl-navy  { color: #1c3a87; }
 
@@ -294,6 +302,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
    ============================================================ */
 .card {
   background: transparent;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
 }
@@ -344,7 +353,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .card__title {
@@ -360,7 +369,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   font-size: 20px;
   font-weight: 300;
   color: var(--color-text-muted);
-  line-height: 1.65;
+  line-height: 1.4;
   flex: 1;
 }
 
@@ -392,12 +401,14 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 .footer__inner {
   display: flex;
   align-items: flex-start;
-  gap: 64px;
+  gap: 0;
 }
 
 /* Brand */
 .footer__brand {
-  flex: 1;
+  flex: 0 0 50%;
+  box-sizing: border-box;
+  padding-right: 64px;
   min-width: 0;
 }
 .footer__brand-name {
@@ -420,6 +431,17 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   font-weight: 400;
   color: var(--color-text);
 }
+.footer__social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  transition: color var(--ease);
+}
+.footer__social-link:hover { color: var(--color-text); }
 
 /* Vertical divider */
 .footer__divider {
@@ -436,6 +458,9 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   gap: 10px;
   min-width: 120px;
 }
+
+.footer__divider + .footer__col { margin-left: 64px; }
+.footer__col + .footer__col    { margin-left: 40px; }
 .footer__col-heading {
   font-size: 16px;
   font-weight: 500;
