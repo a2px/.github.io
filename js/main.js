@@ -36,6 +36,34 @@ document.querySelectorAll('.nav__link').forEach(link => {
   }
 });
 
+// ── Hero star click: shower of falling stars ─────────────────
+const heroStar = document.querySelector('.hero__star');
+if (heroStar) {
+  heroStar.style.cursor = 'pointer';
+  heroStar.addEventListener('click', () => {
+    const count = 30;
+    for (let i = 0; i < count; i++) {
+      const star = document.createElement('img');
+      star.src = 'images/star.png';
+      star.className = 'star-particle';
+      const size = 20 + Math.random() * 36;
+      const left = Math.random() * 100;
+      const duration = 1.2 + Math.random() * 1.8;
+      const delay = Math.random() * 0.6;
+      star.style.cssText = `
+        width:${size}px; height:${size}px;
+        left:${left}vw;
+        animation-duration:${duration}s;
+        animation-delay:${delay}s;
+        opacity:0;
+      `;
+      star.addEventListener('animationstart', () => { star.style.opacity = ''; });
+      star.addEventListener('animationend', () => star.remove());
+      document.body.appendChild(star);
+    }
+  });
+}
+
 // ── Subtle scroll shadow on nav ──────────────────────────────
 const nav = document.querySelector('.nav');
 if (nav) {

@@ -239,6 +239,19 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   padding-bottom: 34px;
 }
 
+@keyframes star-fall {
+  0%   { transform: translateY(0) rotate(0deg) scale(1); opacity: 1; }
+  80%  { opacity: 1; }
+  100% { transform: translateY(110vh) rotate(720deg) scale(0.5); opacity: 0; }
+}
+.star-particle {
+  position: fixed;
+  top: -60px;
+  pointer-events: none;
+  z-index: 9999;
+  animation: star-fall linear forwards;
+}
+
 @keyframes wiggle {
   0%   { transform: rotate(0deg); }
   20%  { transform: rotate(-18deg); }
@@ -392,8 +405,12 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   display: block;
   margin-top: 12px;
   height: 3px;
-  background-image: radial-gradient(circle, #999 1.5px, transparent 1.5px);
-  background-size: 10px 3px;
+  background-image:
+    radial-gradient(circle, #BF3E3E 1.5px, transparent 1.5px),
+    radial-gradient(circle, #76980F 1.5px, transparent 1.5px),
+    radial-gradient(circle, #274CAB 1.5px, transparent 1.5px);
+  background-size: 30px 3px;
+  background-position: 0 0, 10px 0, 20px 0;
   background-repeat: repeat-x;
 }
 
