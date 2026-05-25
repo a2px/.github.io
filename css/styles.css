@@ -571,6 +571,9 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   color: var(--color-text);
   line-height: 1.75;
   margin-bottom: var(--space-lg);
+  display: inline-block;
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 4px;
 }
 
 .about-bio p {
