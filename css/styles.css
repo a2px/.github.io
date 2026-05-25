@@ -250,7 +250,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 
 .hero__clients {
   margin-top: 20px;
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 400;
   color: var(--color-text-muted);
 }
@@ -293,9 +293,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
    PROJECT CARD
    ============================================================ */
 .card {
-  border-radius: var(--radius-md);
   background: transparent;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
@@ -394,14 +392,13 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 .footer__inner {
   display: flex;
   align-items: flex-start;
-  gap: 48px;
+  gap: 64px;
 }
 
 /* Brand */
 .footer__brand {
-  flex: 0 0 auto;
-  min-width: 200px;
-  padding-right: 8px;
+  flex: 1;
+  min-width: 0;
 }
 .footer__brand-name {
   display: flex;
@@ -443,7 +440,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   font-size: 16px;
   font-weight: 500;
   color: var(--color-text);
-  margin-bottom: 2px;
+  margin-bottom: -5px;
 }
 .footer__link {
   font-size: 15px;
