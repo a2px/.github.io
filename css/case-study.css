@@ -55,8 +55,9 @@
   overflow: hidden;
 }
 .cs-gif-container img {
-  height: 75%;
+  max-height: 75%;
   width: auto;
+  height: auto;
   border-radius: var(--radius-md);
 }
 
