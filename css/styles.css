@@ -477,19 +477,19 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   color: var(--color-text);
   margin-bottom: 8px;
 }
 .footer__star-img {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   object-fit: contain;
   flex-shrink: 0;
 }
 .footer__tagline {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
   color: var(--color-text);
 }
@@ -498,7 +498,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   align-items: center;
   gap: 6px;
   margin-top: 12px;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 400;
   color: var(--color-text-muted);
   transition: color var(--ease);
