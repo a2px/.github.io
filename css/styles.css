@@ -704,7 +704,8 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
     gap: var(--space-xl);
   }
 
-  .footer__inner { flex-direction: column; gap: var(--space-md); }
+  .footer__inner { flex-direction: column; gap: var(--space-md); align-items: stretch; }
+  .footer__col { margin-left: 0 !important; width: 100%; }
   .footer__brand { text-align: left; width: 100%; padding-right: 0; padding-bottom: var(--space-md); border-bottom: 1px solid var(--color-border); }
   .footer__brand-name { justify-content: flex-start; }
   .footer__divider { display: none; }
