@@ -382,6 +382,14 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 .card__thumb--3 { background: #FBF2DC; }
 .card__thumb--4 { background: #E8F3EC; }
 
+/* Locate Alpha card — center image (landscape screenshot, not bottom-pinned) */
+.card__thumb--4 img {
+  bottom: auto;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.card:hover .card__thumb--4 img { transform: translate(-50%, -50%) scale(1.04); }
+
 .card__thumb--coming-soon {
   display: flex;
   align-items: center;
