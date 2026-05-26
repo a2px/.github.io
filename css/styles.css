@@ -316,7 +316,20 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
    PROJECTS SECTION
    ============================================================ */
 .projects {
-  padding: 34px 0 var(--space-2xl);
+  padding: 0 0 var(--space-2xl);
+}
+.projects .container::before {
+  content: '';
+  display: block;
+  height: 3px;
+  margin: 34px 0;
+  background-image:
+    radial-gradient(circle, #BF3E3E 1.5px, transparent 1.5px),
+    radial-gradient(circle, #76980F 1.5px, transparent 1.5px),
+    radial-gradient(circle, #274CAB 1.5px, transparent 1.5px);
+  background-size: 30px 3px;
+  background-position: 0 0, 10px 0, 20px 0;
+  background-repeat: repeat-x;
 }
 
 .projects__header {
