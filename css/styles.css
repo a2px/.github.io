@@ -377,7 +377,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 .card:hover .card__thumb img { transform: translateX(-50%) scale(1.04); }
 
 /* flat solid background colors — pastel tints of hero blue/green/red */
-.card__thumb--1 { background: #DDE4F5; } /* pastel blue  — Capstone  */
+.card__thumb--1 { background: #F5F5F5; } /* light gray   — Capstone  */
 .card__thumb--2 { background: #DDE4F5; } /* pastel blue  — Lennar    */
 .card__thumb--3 { background: #F5E2E2; } /* pastel red   — Dreamfinders */
 .card__thumb--4 { background: #EAF0DB; } /* pastel green — Locate Alpha */
