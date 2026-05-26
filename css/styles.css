@@ -382,6 +382,20 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 .card__thumb--3 { background: #FBF2DC; }
 .card__thumb--4 { background: #E8F3EC; }
 
+.card__thumb--coming-soon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card__coming-soon {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  opacity: 0.5;
+}
+
 .card__body {
   padding: 20px 0 24px;
   flex: 1;
