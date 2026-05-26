@@ -7,6 +7,57 @@
   padding-bottom: var(--space-lg);
 }
 
+/* Hero two-column split */
+.cs-hero__split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.cs-hero__right .cs-cover__img {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+}
+
+.cs-hero__right .cs-cover__img img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Side-by-side media grid */
+.cs-media-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: var(--space-lg);
+}
+.cs-media-row .cs-media {
+  margin: 0;
+}
+.cs-media-row figcaption {
+  text-align: left;
+}
+
+/* Generic two-column content split */
+.cs-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+  margin-top: var(--space-md);
+}
+
+.cs-split__left,
+.cs-split__right {
+  min-width: 0;
+}
+
 .cs-back {
   display: inline-flex;
   align-items: center;
@@ -212,6 +263,17 @@
 .cs-card {
   background: var(--color-off-white);
   border-radius: var(--radius-md);
+  overflow: hidden;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.cs-card__img .cs-media-placeholder {
+  aspect-ratio: 3 / 4;
+  border-radius: 0;
+  border: none;
+}
+.cs-card__body {
   padding: var(--space-md);
 }
 .cs-card h4 {
@@ -254,7 +316,7 @@
 .cs-steps { margin: var(--space-lg) 0; }
 .cs-step {
   display: grid;
-  grid-template-columns: 72px 1fr;
+  grid-template-columns: 72px 1fr 1fr;
   gap: 24px;
   padding: var(--space-md) 0;
   border-top: 1px solid var(--color-border);
@@ -269,6 +331,7 @@
 }
 .cs-step h3 { margin-bottom: 8px; }
 .cs-step p  { margin-bottom: 0; }
+.cs-step__media { margin: 0; }
 
 /* Media / image block */
 .cs-media {
@@ -304,10 +367,18 @@
   box-sizing: border-box;
 }
 
+@media (max-width: 768px) {
+  .cs-hero__split { grid-template-columns: 1fr; gap: var(--space-lg); }
+  .cs-hero__right { order: -1; }
+  .cs-split { grid-template-columns: 1fr; gap: var(--space-lg); }
+  .cs-media-row { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 640px) {
   .cs-meta { gap: 28px; }
   .cs-stats { grid-template-columns: 1fr; }
   .cs-cards { grid-template-columns: 1fr; }
   .cs-step  { grid-template-columns: 1fr; }
   .cs-step__num { padding-top: 0; }
+  .cs-step__media { margin: var(--space-sm) 0 0; }
 }
