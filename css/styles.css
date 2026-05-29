@@ -204,7 +204,8 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   display: inline-block;
   padding: 4px 12px;
   background: #FFFFFF;
-  color: var(--color-accent);
+  color: var(--color-text-muted);
+  border: 1px solid #EEF0EB;
   border-radius: var(--radius-pill);
   font-size: var(--text-xs);
   font-weight: 500;
@@ -582,8 +583,8 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   font-size: clamp(18px, 2vw, 22px);
   font-weight: 400;
   color: var(--color-text);
-  line-height: 1.75;
-  margin-bottom: var(--space-lg);
+  line-height: 1.2;
+  margin-bottom: var(--space-md);
   display: inline-block;
   border-bottom: 2px solid var(--color-accent);
   padding-bottom: 4px;
@@ -610,9 +611,9 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   font-size: clamp(18px, 2vw, 22px);
   font-weight: 300;
   color: var(--color-text);
-  padding: 18px 0;
+  padding: 10px 0;
   border-top: 1px solid var(--color-border);
-  line-height: 1.75;
+  line-height: 1.2;
 }
 
 .about-skills li:last-child {
