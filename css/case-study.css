@@ -104,6 +104,18 @@
   border: 1px solid var(--color-border);
 }
 
+/* Iteration phone screenshots — two phones side by side, no background */
+.cs-iter-phones {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.cs-iter-phones img {
+  width: 48%;
+  height: auto;
+  border-radius: var(--radius-md);
+}
+
 /* Ideation / Crazy 8s container — gray, two images side by side */
 .cs-ideation-container {
   background: var(--color-off-white);
