@@ -112,27 +112,21 @@
   display: flex;
   gap: 12px;
   align-items: center;
-  height: 420px;
+  height: 400px;
+  overflow: hidden;
 }
 .cs-iter-phones img,
 .cs-iter-phones .cs-media-placeholder {
+  flex: 1;
+  min-width: 0;
   height: 100%;
-  width: auto;
-  flex-shrink: 0;
+  object-fit: contain;
+  object-position: center;
   border-radius: var(--radius-md);
-}
-.cs-iter-phones--single img,
-.cs-iter-phones--single .cs-media-placeholder {
-  max-height: 200px;
-}
-.cs-iter-phones--3 img,
-.cs-iter-phones--3 .cs-media-placeholder {
-  height: 100%;
-  width: auto;
 }
 .cs-iter-placeholder {
   aspect-ratio: 9 / 16;
-  min-height: unset;
+  flex-shrink: 0;
 }
 
 /* Ideation / Crazy 8s container — gray, two images side by side */
