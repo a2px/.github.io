@@ -104,16 +104,34 @@
   border: 1px solid var(--color-border);
 }
 
-/* Iteration phone screenshots — two phones side by side, no background */
+/* Iteration phone screenshots */
+.cs-iter-row {
+  margin-top: var(--space-2xl);
+}
 .cs-iter-phones {
   display: flex;
-  gap: 16px;
+  gap: 12px;
   align-items: center;
 }
-.cs-iter-phones img {
+.cs-iter-phones img,
+.cs-iter-phones .cs-media-placeholder {
   width: 48%;
+  flex-shrink: 0;
   height: auto;
   border-radius: var(--radius-md);
+}
+.cs-iter-phones--single img,
+.cs-iter-phones--single .cs-media-placeholder {
+  max-width: 200px;
+}
+.cs-iter-phones--3 img,
+.cs-iter-phones--3 .cs-media-placeholder {
+  width: 31%;
+  flex-shrink: 0;
+}
+.cs-iter-placeholder {
+  aspect-ratio: 9 / 16;
+  min-height: unset;
 }
 
 /* Ideation / Crazy 8s container — gray, two images side by side */
