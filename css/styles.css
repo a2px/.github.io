@@ -339,7 +339,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
    PROJECT CARD
    ============================================================ */
 .card {
-  background: transparent;
+  background: #FFFFFF;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
