@@ -106,7 +106,9 @@
 
 /* Iteration phone screenshots */
 .cs-iter-row {
-  margin-top: var(--space-2xl);
+  margin-top: var(--space-xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid var(--color-border);
 }
 .cs-iter-phones {
   display: flex;

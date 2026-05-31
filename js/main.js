@@ -69,7 +69,7 @@ const nav = document.querySelector('.nav');
 if (nav) {
   const updateNav = () => {
     nav.style.boxShadow = window.scrollY > 8
-      ? '0 2px 20px rgba(0,0,0,0.07)'
+      ? '0 2px 6px rgba(0,0,0,0.02)'
       : 'none';
   };
   window.addEventListener('scroll', updateNav, { passive: true });
