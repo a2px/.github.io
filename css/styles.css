@@ -273,6 +273,10 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   display: inline-flex;
   align-items: center;
   margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+.btn--slide:hover .btn--slide__arrow {
+  transform: rotate(45deg);
 }
 
 /* ============================================================
