@@ -1,3 +1,19 @@
+// ── Page loader ──────────────────────────────────────────────
+const loader = document.getElementById('page-loader');
+if (loader) {
+  let loaded = false;
+  const showTimer = setTimeout(() => {
+    if (!loaded) loader.classList.add('is-visible');
+  }, 400);
+  window.addEventListener('load', () => {
+    loaded = true;
+    clearTimeout(showTimer);
+    loader.classList.remove('is-visible');
+    loader.classList.add('is-hidden');
+    setTimeout(() => loader.remove(), 375);
+  });
+}
+
 // ── Mobile nav toggle ────────────────────────────────────────
 const toggle = document.querySelector('.nav__toggle');
 const navLinks = document.querySelector('.nav__links');
