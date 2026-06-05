@@ -553,13 +553,21 @@
   font-style: italic;
 }
 .cs-step-img-box--wide {
-  align-items: flex-end;
-  padding-top: 5px;
-  padding-bottom: 0;
-  aspect-ratio: 16 / 9;
+  display: block;
+  position: relative;
+  padding: 0;
+  aspect-ratio: 2.43;
 }
 .cs-step-img-box--wide img {
-  max-width: 85%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75%;
+  max-width: none;
+  height: auto;
+  border: none;
+  border-radius: 0;
 }
 
 .cs-img-frame {
