@@ -31,6 +31,18 @@
   object-fit: cover;
 }
 
+.cs-hero__right .card__thumb {
+  aspect-ratio: 4 / 3;
+}
+
+.cs-hero__right .card__thumb img {
+  top: auto;
+  bottom: 0;
+  left: 0;
+  transform: none;
+  width: 92%;
+}
+
 /* Side-by-side media grid */
 .cs-media-row {
   display: grid;
