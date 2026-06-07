@@ -559,6 +559,9 @@
 }
 .cs-step-img-box--portrait img {
   max-width: 76%;
+  width: auto;
+  height: auto;
+  max-height: 100%;
 }
 
 .cs-step-img-box--wide {
