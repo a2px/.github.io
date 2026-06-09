@@ -87,7 +87,8 @@
    RESET
    ============================================================ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body { overflow-x: hidden; }
 body {
   font-family: var(--font);
   font-size: var(--text-base);
@@ -370,7 +371,7 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 }
 
 .hero__line1 {
-  font-size: 41.6px;
+  font-size: clamp(24px, 3.5vw, 41.6px);
   font-family: 'Instrument Serif', serif;
   display: block;
   position: relative;
