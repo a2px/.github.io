@@ -842,7 +842,14 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 /* ============================================================
    MEDIA — TABLET (max 1024px)
    ============================================================ */
-@media (max-width: 1024px) {
+@media (max-width: 1300px) {
+  /* Tighten footer brand so columns don't overflow */
+  .footer__brand { flex: 0 0 40%; padding-right: 32px; }
+  .footer__divider + .footer__col { margin-left: 32px; }
+  .footer__col + .footer__col { margin-left: 24px; }
+}
+
+@media (max-width: 1200px) {
   :root {
     --container-px: 40px;
     --space-xl: 56px;
@@ -854,14 +861,11 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
     gap: 56px;
   }
 
-  /* Single-column cards */
-  .projects__grid { grid-template-columns: 1fr; gap: 20px; }
-
   /* Footer: stack */
   .footer__inner { flex-direction: column; gap: var(--space-md); align-items: stretch; }
   .footer__col { margin-left: 0 !important; width: 100%; }
   .footer__divider { display: none; }
-  .footer__brand { text-align: left; width: 100%; padding-right: 0; padding-bottom: calc(var(--space-md) + 8px); position: relative; }
+  .footer__brand { flex: none; width: 100%; padding-right: 0; padding-bottom: calc(var(--space-md) + 8px); position: relative; }
   .footer__brand::after {
     content: '';
     position: absolute;
