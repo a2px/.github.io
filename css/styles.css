@@ -561,9 +561,20 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
    ============================================================ */
 .footer {
   background: var(--color-bg);
-  border-top: 1px solid var(--color-border);
-  padding: var(--space-lg) 0;
+  position: relative;
+  padding: calc(var(--space-lg) + 8px) 0 var(--space-lg);
   margin-top: var(--space-xl);
+}
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='8'%3E%3Cpath d='M0 4 Q5 0 10 4 Q15 8 20 4' fill='none' stroke='%23E8ECF2' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: top left;
 }
 
 .footer__inner {

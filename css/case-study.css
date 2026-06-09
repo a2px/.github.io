@@ -2,6 +2,52 @@
    CASE STUDY PAGES
    ============================================================ */
 
+/* Project navigation (prev / next) */
+.cs-project-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 16px;
+  padding: var(--space-xl) 0 var(--space-lg);
+  margin-top: var(--space-xl);
+}
+.cs-project-nav__prev,
+.cs-project-nav__next {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  padding: 24px 28px;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  background: var(--color-bg);
+  transition: border-color var(--ease), box-shadow var(--ease);
+}
+.cs-project-nav__prev:hover,
+.cs-project-nav__next:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.cs-project-nav__next { align-items: flex-end; text-align: right; }
+.cs-project-nav__label {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+.cs-project-nav__title {
+  font-size: clamp(18px, 2.5vw, 26px);
+  font-family: 'Instrument Serif', serif;
+  font-weight: 400;
+  color: var(--color-text);
+  transition: color var(--ease);
+}
+.cs-project-nav__prev:hover .cs-project-nav__title,
+.cs-project-nav__next:hover .cs-project-nav__title {
+  color: var(--color-accent);
+}
+
 .cs-hero {
   padding-top: calc(var(--nav-h) + calc(var(--space-xl) * 0.25));
   padding-bottom: var(--space-lg);
