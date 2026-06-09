@@ -666,10 +666,14 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 .footer__divider + .footer__col { margin-left: 64px; }
 .footer__col + .footer__col    { margin-left: 40px; }
 .footer__col-heading {
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 26px;
+  font-family: 'Instrument Serif', serif;
+  font-weight: 400;
   color: var(--color-text);
   margin-bottom: -5px;
+  display: inline-block;
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 4px;
 }
 .footer__link {
   font-size: 20px;
@@ -720,7 +724,8 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 }
 
 .about-label {
-  font-size: clamp(18px, 2vw, 22px);
+  font-size: 41px;
+  font-family: 'Instrument Serif', serif;
   font-weight: 400;
   color: var(--color-text);
   line-height: 1.2;
@@ -730,15 +735,15 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
   padding-bottom: 4px;
 }
 
+.about-bio p.about-label {
+  font-size: 41px;
+}
 .about-bio p {
   font-size: clamp(18px, 2vw, 22px);
   font-weight: 300;
   color: var(--color-text);
   line-height: 1.2;
   margin-bottom: var(--space-md);
-}
-.about-bio .about-label {
-  font-weight: 400;
 }
 
 .about-skills {
@@ -873,7 +878,18 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 
   .footer__inner { flex-direction: column; gap: var(--space-md); align-items: stretch; }
   .footer__col { margin-left: 0 !important; width: 100%; }
-  .footer__brand { text-align: left; width: 100%; padding-right: 0; padding-bottom: var(--space-md); border-bottom: 1px solid var(--color-border); }
+  .footer__brand { text-align: left; width: 100%; padding-right: 0; padding-bottom: calc(var(--space-md) + 8px); position: relative; }
+  .footer__brand::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='8'%3E%3Cpath d='M0 4 Q5 0 10 4 Q15 8 20 4' fill='none' stroke='%23E8ECF2' stroke-width='1.5'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    background-position: bottom left;
+  }
   .footer__brand-name { justify-content: flex-start; }
   .footer__divider { display: none; }
 }
